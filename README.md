@@ -12,17 +12,19 @@ These are AuxResNet models trained on CIFAR and SVHN. Below is the accuracy of A
 
 Testing error on CIFAR
 
-| Network        | CIFAR10           | CIFAR100  |
-| ------------- |:-------------:|:-----:|
-| AuxResNet-56-2      | 5.89 | 26.83 |
-| AuxResNet-56-5      | 5.53      | 26.62 |
-| AuxResNet-26-2/10 | 3.91      | 19.69 |
+| network       | outputs position | CIFAR10 | CIFAR100  |
+| ------------- |:-------------:|:-------------:|:-----:|
+| AuxResNet-56-2| {56, 45} | 5.89 | 26.83 |
+| AuxResNet-56-5| {56, 45, 35, 25, 15} | 5.53      | 26.62 |
+| AuxResNet-26-2/10| {26, 19} | 3.91      | 19.69 |
 
 Testing error on SVHN
 
-| Network        | CIFAR10           | CIFAR100  |
+| network        | outputs position | SVHN  |
 | ------------- |:-------------:|:-----:|
-| AuxResNet-56-2      | 5.89 | 26.83 |
-| AuxResNet-56-5      | 5.53      | 26.62 |
-| AuxResNet-26-2/10<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | 3.91      | 19.69 |
+| AuxResNet-44-2      | {44, 39} | 1.96 |
+| AuxResNet-56-2      | {56, 45} | 1.84 |
+| AuxResNet-44-2<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;">      | {44, 39} | 1.75 |
+| AuxResNet-56-2<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45} | 1.63 |
+| AuxResNet-56-3<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45, 35} | 1.58 |
 
