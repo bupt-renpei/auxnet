@@ -26,4 +26,4 @@ Testing error on SVHN
 | AuxResNet-56-5      | 5.53      | 26.62 |
 | AuxResNet-26-2/10$$^\dagger$$ | 3.91      | 19.69 |
 
-$$abc$$   $$abc$$
+$abc$   $abc$
