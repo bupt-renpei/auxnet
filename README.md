@@ -24,8 +24,5 @@ Testing error on SVHN
 | ------------- |:-------------:|:-----:|
 | AuxResNet-56-2      | 5.89 | 26.83 |
 | AuxResNet-56-5      | 5.53      | 26.62 |
-| AuxResNet-26-2/10$$^\dagger$$ | 3.91      | 19.69 |
+| AuxResNet-26-2/10<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | 3.91      | 19.69 |
 
-$$$abc$$$
-
-$abc$   $abc$
