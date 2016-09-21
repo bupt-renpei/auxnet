@@ -1,4 +1,4 @@
-#Trained AuxResNet Torch models
+#Trained AuxResNet Torch models#
 Tis repository contains the trained models of AuxResNet with the multi-way backpropagation. These models are trained on CIFAR and SVHN. The performances of AuxResNet on these benchmark data sets are included below.
 
 ## Trained Models ##
