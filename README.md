@@ -33,5 +33,3 @@ Testing error on SVHN
 ![cifar10best](http://i.imgur.com/dlOHhZZ.jpg)
 
 
-
-<table><tr><td bgcolor=orange>背景色是：orange</td></tr></table>
