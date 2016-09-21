@@ -22,9 +22,11 @@ th main.lua -depth 56 -batchsize 256 -nGPU 4 -nThreads 8 -shareGradInput true -d
 
 ## Intermediate Model ##
 During training time, it would generate multiple models including intermedia and final model from different layer.For example:&nbsp;&nbsp;
+
 | network       | outputs position |
 | ------------- |:-------------:|
-| AuxResNet-56-2| {56, 45} |&nbsp;&nbsp;
+| AuxResNet-56-2| {56, 45} |
+
 Data in this table means that training system has generated 2 model including intermedia from 45 layer and final one from 56 layer.
 
 
