@@ -32,4 +32,4 @@ Testing error on SVHN
 
 ![cifar10best](http://i.imgur.com/dlOHhZZ.jpg)
 
-
+<table><tr><td bgcolor=#7FFFD4> th test.lua auxresnet-56-2.t7 img1.jpg img2.jpg ... </td></tr></table>
