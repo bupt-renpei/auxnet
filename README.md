@@ -1,5 +1,27 @@
-#Trained AuxResNet Torch models#
-Tis repository contains the trained models of AuxResNet with the multi-way backpropagation. These models are trained on CIFAR and SVHN. The performances of AuxResNet on these benchmark data sets are included below.
+# Trained AuxResNet Torch models #
+This repository contains the trained models of AuxResNet with the multi-way backpropagation. These models are trained on CIFAR and SVHN. The performances of AuxResNet on these benchmark data sets are included below.
+
+## Training ##
+The training scripts come with several options, which can be listed the --help flag.
+
+```
+th main.lua --help
+```
+
+To run the training, simply run main.lua. By default, the script runs AuxResNet-26-2/10 on CIFAR10 with 1GPU and 2 data-loader threads.
+
+```
+th main.lua -data[CIFAR10]
+```
+
+To run AuxResNet-56-2 on 4GPUs:
+
+```
+th main.lua -depth 56 -batchsize 256 -nGPU 4 -nThreads 8 -shareGradInput true -data[CIFAR100]
+```
+
+## Saving Model ##
+The dafault path for saving model is the root(./).
 
 ## Trained Models ##
 - [CIFAR10-AuxResNet-56-2 [56, 45]](http://baidu.com "AuxResNet-56-2")
@@ -9,6 +31,19 @@ Tis repository contains the trained models of AuxResNet with the multi-way backp
 - [CIFAR100-AuxResNet-56-5 [56, 45, 35, 25, 15]](http://baidu.com "AuxResNet-56-5")
 - [CIFAR100-AuxResNet-26-2/10 [26, 19]](http://baidu.com "AuxResNet-26-2/10")
 - [SVHN-AuxResNet-56-3 [56, 45, 35]](http://baidu.com "AuxResNet-56-3")
+
+## Testing Intermediate/Final Models ##
+During training time, it would generate multiple models including intermediate and final model. To get the result of a intermediate/final model for given input dataset, you can use [test.lua]() script.For example:&nbsp;&nbsp;
+
+```
+th test.lua CIFAR10 AuxResNet-26-2/10
+```
+
+Example output:&nbsp;&nbsp;
+
+```
+error 3.91
+```
 
 ## Performance ##
 Testing error on CIFAR
@@ -32,4 +67,3 @@ Testing error on SVHN
 
 ![cifar10best](http://i.imgur.com/dlOHhZZ.jpg)
 
-> th test.lua auxresnet-56-2.t7 img1.jpg img2.jpg
