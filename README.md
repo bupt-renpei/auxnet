@@ -20,6 +20,14 @@ To run AuxResNet-56-2 on 4GPUs:
 th main.lua -depth 56 -batchsize 256 -nGPU 4 -nThreads 8 -shareGradInput true -data[CIFAR100]
 ```
 
+## Intermediate Model ##
+During training time, it would generate multiple models including intermedia and final model from different layer.For example:
+| network       | outputs position |
+| ------------- |:-------------:|
+| AuxResNet-56-2| {56, 45} |
+Data in this table suggests that 
+
+
 ## Saving Model ##
 The dafault path for saving model is the root(./).
 
@@ -33,7 +41,7 @@ The dafault path for saving model is the root(./).
 - [SVHN-AuxResNet-56-3 [56, 45, 35]](http://baidu.com "AuxResNet-56-3")
 
 ## Testing Intermediate/Final Models ##
-During training time, it would generate multiple models including intermediate and final model. To get the result of a intermediate/final model for given input dataset, you can use [test.lua]() script.For example:&nbsp;&nbsp;
+To get the result of a intermediate/final model for given input dataset, you can use [test.lua]() script.For example:&nbsp;&nbsp;
 
 ```
 th test.lua CIFAR10 AuxResNet-26-2/10
