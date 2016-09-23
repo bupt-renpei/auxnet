@@ -36,10 +36,14 @@ To get the result of a intermediate model for given imput dataset, you can use [
 ```
 th intermedia.lua -dataset CIFAR10 -model AuxResNet-56-2.t7 -fc fc.t7
 ```
+
 Example model:&nbsp;&nbsp;
+
 | network       | outputs position |
 | ------------- |:-------------:|
-| AuxResNet-56-5| {56, 45, 35, 25, 15} |&nbsp;&nbsp;
+| AuxResNet-56-5| {56, 45, 35, 25, 15} |
+
+&nbsp;&nbsp;
 
 Example output: &nbsp;&nbsp;
 ```
