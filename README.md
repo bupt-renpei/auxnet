@@ -1,6 +1,7 @@
 # Trained AuxResNet Torch models #
 This repository contains the trained models of AuxResNet with the multi-way backpropagation. These models are trained on CIFAR and SVHN. The performances of AuxResNet on these benchmark data sets are included below.
 
+&nbsp;&nbsp;
 ## Trained Models ##
 - [CIFAR10-AuxResNet-56-2 [56, 45]](http://baidu.com "AuxResNet-56-2")
 - [CIFAR10-AuxResNet-56-5 [56, 45, 35, 25, 15]](http://baidu.com "AuxResNet-56-5")
@@ -10,6 +11,7 @@ This repository contains the trained models of AuxResNet with the multi-way back
 - [CIFAR100-AuxResNet-26-2/10 [26, 19]](http://baidu.com "AuxResNet-26-2/10")
 - [SVHN-AuxResNet-56-3 [56, 45, 35]](http://baidu.com "AuxResNet-56-3")
 
+&nbsp;&nbsp;
 ## Testing Models ##
 To get the result of a model saving in root for given input dataset, you can use [test.lua]() script.For example:&nbsp;&nbsp;
 
@@ -30,6 +32,7 @@ AuxResNet-56-5     error     5.53
 AuxResNet-26-2/10  error     3.91
 ```
 
+&nbsp;&nbsp;
 ## Performance ##
 Testing error on CIFAR
 
@@ -52,6 +55,7 @@ Testing error on SVHN
 
 ![cifar10best](http://i.imgur.com/dlOHhZZ.jpg)
 
+&nbsp;&nbsp;
 ## Intermediate Models ##
 
 To get the result of a intermediate model for given imput dataset, you can use [intermedia.lua]() script. For example:&nbsp;&nbsp;
@@ -66,7 +70,6 @@ Example model:&nbsp;&nbsp;
 | AuxResNet-56-5| {56, 45, 35, 25, 15} |
 
 &nbsp;&nbsp;
-
 Example output: &nbsp;&nbsp;
 ```
 Model   AuxResNet-56-5
