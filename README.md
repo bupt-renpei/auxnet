@@ -1,38 +1,6 @@
 # Trained AuxResNet Torch models #
 This repository contains the trained models of AuxResNet with the multi-way backpropagation. These models are trained on CIFAR and SVHN. The performances of AuxResNet on these benchmark data sets are included below.
 
-## Training ##
-The training scripts come with several options, which can be listed the --help flag.
-
-```
-th main.lua --help
-```
-
-To run the training, simply run main.lua. By default, the script runs AuxResNet-26-2/10 on CIFAR10 with 1GPU and 2 data-loader threads.
-
-```
-th main.lua -data[CIFAR10]
-```
-
-To run AuxResNet-56-2 on 4GPUs:
-
-```
-th main.lua -depth 56 -batchsize 256 -nGPU 4 -nThreads 8 -shareGradInput true -data[CIFAR100]
-```
-
-## Intermediate Model ##
-During training time, it would generate multiple models including intermedia and final model from different layer.For example:&nbsp;&nbsp;
-
-| network       | outputs position |
-| ------------- |:-------------:|
-| AuxResNet-56-2| {56, 45} |
-
-Data in this table means that training system has generated 2 model including intermedia from 45 layer and final one from 56 layer.
-
-
-## Saving Model ##
-The dafault path for saving model is the root(./).
-
 ## Trained Models ##
 - [CIFAR10-AuxResNet-56-2 [56, 45]](http://baidu.com "AuxResNet-56-2")
 - [CIFAR10-AuxResNet-56-5 [56, 45, 35, 25, 15]](http://baidu.com "AuxResNet-56-5")
@@ -42,17 +10,45 @@ The dafault path for saving model is the root(./).
 - [CIFAR100-AuxResNet-26-2/10 [26, 19]](http://baidu.com "AuxResNet-26-2/10")
 - [SVHN-AuxResNet-56-3 [56, 45, 35]](http://baidu.com "AuxResNet-56-3")
 
-## Testing Intermediate/Final Models ##
-To get the result of a intermediate/final model for given input dataset, you can use [test.lua]() script.For example:&nbsp;&nbsp;
+## Testing Models ##
+To get the result of a model saving in root for given input dataset, you can use [test.lua]() script.For example:&nbsp;&nbsp;
 
 ```
-th test.lua CIFAR10 AuxResNet-26-2/10
+th test.lua -dataset CIFAR10 -model AuxResNet-56-2.t7
+th test.lua -dataset CIFAR10 -model AuxResNet-56-5.t7
+th test.lua -dataset CIFAR10 -model AuxResNet-26-2/10.t7
+th test.lua -dataset CIFAR10 -model AuxResNet-56-2.t7
+th test.lua -dataset CIFAR10 -model AuxResNet-56-5.t7
+th test.lua -dataset CIFAR10 -model AuxResNet-26-2/10.t7
+th test.lua -dataset CIFAR10 -model AuxResNet-56-3.t7
 ```
 
 Example output:&nbsp;&nbsp;
-
 ```
-error 3.91
+AuxResNet-56-2     error     5.89
+AuxResNet-56-5     error     5.53
+AuxResNet-26-2/10  error     3.91
+```
+
+## Intermediate Models ##
+
+To get the result of a intermediate model for given imput dataset, you can use [intermedia.lua]() script. For example:&nbsp;&nbsp;
+```
+th intermedia.lua -dataset CIFAR10 -model AuxResNet-56-2.t7 -fc fc.t7
+```
+Example model:&nbsp;&nbsp;
+| network       | outputs position |
+| ------------- |:-------------:|
+| AuxResNet-56-5| {56, 45, 35, 25, 15} |&nbsp;&nbsp;
+
+Example output: &nbsp;&nbsp;
+```
+Model   AuxResNet-56-5
+layer15  error  [err_num]
+layer25  error  [err_num]
+layer35  error  [err_num]
+layer45  error  [err_num]
+layer56  error  [err_num]
 ```
 
 ## Performance ##
