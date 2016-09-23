@@ -51,6 +51,7 @@ Testing error on SVHN
 | AuxResNet-56-3<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45, 35} | **1.58** |
 
 ![cifar10best](http://i.imgur.com/dlOHhZZ.jpg)
+![](http://i.imgur.com/dlOHhZZ.jpg =100*100)
 
 ## Intermediate Models ##
 
