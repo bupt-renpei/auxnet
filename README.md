@@ -1,7 +1,7 @@
 # Trained AuxResNet Torch models #
 The depth of convolutional neural networks (CNNs) is of critical importance. There are some issues associated with the increased depth. Besides the vanishing gradient problem, very deep networks also suffer from a vanishing supervision signal problem. In the course of the investigation we presented a novel model, called **AuxResNet**, which addresses the vanishing supervision signal problem through the use of additional auxiliary outputs. We proposed a *multi-way gradient backpropagation* method to train the models. As a result, the proposed **AuxResNet** gives rise to a more compact network and achieves state-of-the-art performance on various data sets. **AuxResNet** also helps to produce multiple models of different depths, thus offering the opportunity for a form of model selection.
 
-This repository contains the trained models of **AuxResNet** with the multi-way backpropagation. These models are trained on CIFAR and SVHN. The performances of AuxResNet on these benchmark data sets are included below.
+This repository contains the trained models of **AuxResNet** using the multi-way backpropagation. These models are trained on CIFAR and SVHN. The performances of AuxResNet on these benchmark data sets are included below.
 
 Testing error on CIFAR
 
@@ -22,8 +22,8 @@ Testing error on SVHN
 | AuxResNet-56-2<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45} | 1.63 |
 | AuxResNet-56-3<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45, 35} | **1.58** |
 
-![cifar10best](http://i.imgur.com/SuFADMS.jpg)
-
+<img src="http://i.imgur.com/9iR1TW4.jpg" width = "400" height = "350" alt="图片名称" align=center />
+<img src="http://i.imgur.com/d6kvl8G.jpg" width = "400" height = "350" alt="图片名称" align=center />
 
 ## Trained Models ##
 - [CIFAR10-AuxResNet-56-2 [56, 45]](http://baidu.com "AuxResNet-56-2")
@@ -45,19 +45,30 @@ To get the result of the AuxResNet model for given benchmark data sets, you have
 Then you can run the script [test.lua](). For example:
 
 ```
-th test.lua -dataset CIFAR10 -model AuxResNet-26-2/10 
+th test.lua -dataset CIFAR10 -model AuxResNet-26-2/10.t7 
 ```
 
-## Intermediate Model ##
-During the training, **AuxResNet** simultaneously generates multiple models with different depth. For example:
+## Intermediate Models ##
+During the training, **AuxResNet** simultaneously generates multiple models with different depth. Take AuxResNet-56-5 for example:
 
+| intermediate models | #layers | #params |
+| ------------- |:-------------:|:-----:|
+|output-56| 56 | 0.85M |
+|output-45| 45 | 0.48M |
+|output-35| 35 | 0.18M |
+|output-25| 25 | 0.09M |
+|output-15| 15 | 0.03M |
 
+To run the testing for intermediate models, simply run the script [intermediate.lua]().
 
-| network       | intermediate models |
-| ------------- |:-------------:|
-| AuxResNet-56-2| output-56 <br> ---------------------- <br> output-45 <br> ---------------------- <br> output-35 <br> ---------------------- <br> output-25 <br> ---------------------- <br> output-15 |
+```
+th intermediate.lua -dataset CIFAR10 -model AuxResNet-56-5.t7 -outputs outputs-56-5.t7 
+```
 
-Data in this table means that training system has generated 2 model including intermedia from 45 layer and final one from 56 layer.
+## Other Models ##
+Additional models in torch:
 
-
-
+- VGG & NIN [https://github.com/szagoruyko/cifar.torch](https://github.com/szagoruyko/cifar.torch)
+- Deep Networks with Stochastic Depth [https://github.com/yueatsprograms/Stochastic_Depth](https://github.com/yueatsprograms/Stochastic_Depth "StochResNet")
+- Wide Residual Network [https://github.com/szagoruyko/wide-residual-networks](https://github.com/szagoruyko/wide-residual-networks "WideResNet")
+- pre-act ResNet [https://github.com/KaimingHe/resnet-1k-layers](https://github.com/KaimingHe/resnet-1k-layers "preactResNet")
