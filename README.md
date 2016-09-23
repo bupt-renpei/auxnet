@@ -49,7 +49,7 @@ th test.lua -dataset CIFAR10 -model AuxResNet-26-2/10
 ```
 
 ## Intermediate Model ##
-During the training, it generates multiple models with different depth. For example:
+During the training, **AuxResNet** simultaneously generates multiple models with different depth. For example:
 
 
 
