@@ -49,11 +49,13 @@ th test.lua -dataset CIFAR10 -model AuxResNet-26-2/10
 ```
 
 ## Intermediate Model ##
-During training time, it would generate multiple models including intermedia and final model from different layer.For example:&nbsp;&nbsp;
+During the training, it generates multiple models with different depth. For example:
 
-| network       | outputs position |
+
+
+| network       | intermediate models |
 | ------------- |:-------------:|
-| AuxResNet-56-2| {56, 45} |
+| AuxResNet-56-2| output-56 <br> ---------------------- <br> output-45 <br> ---------------------- <br> output-35 <br> ---------------------- <br> output-25 <br> ---------------------- <br> output-15 |
 
 Data in this table means that training system has generated 2 model including intermedia from 45 layer and final one from 56 layer.
 
