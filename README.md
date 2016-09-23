@@ -69,7 +69,7 @@ Example model:&nbsp;&nbsp;
 | ------------- |:-------------:|
 | AuxResNet-56-5| {56, 45, 35, 25, 15} |
 
-&nbsp;&nbsp;
+
 Example output: &nbsp;&nbsp;
 ```
 Model   AuxResNet-56-5
