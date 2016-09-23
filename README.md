@@ -1,4 +1,5 @@
 # Trained AuxResNet Torch models #
+The depth of convolutional neural networks (CNNs) is of critical importance. There are some issues associated with the increased depth. Besides the vanishing gradient problem, very deep networks also suffer from a vanishing supervision signal problem. In the course of the investigation we presented a novel model, called AuxResNet, which addresses the vanishing supervision signal problem through the use of additional auxiliary outputs. We proposed a multi-way gradient backpropagation method to train the models. As a result, the proposed AuxResNet gives rise to a more compact network and achieves state-of-the-art performance on various data sets. AuxResNet also helps to produce multiple models of different depths, thus offering the opportunity for a form of model selection.
 This repository contains the trained models of AuxResNet with the multi-way backpropagation. These models are trained on CIFAR and SVHN. The performances of AuxResNet on these benchmark data sets are included below.
 
 Testing error on CIFAR
