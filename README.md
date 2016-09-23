@@ -23,8 +23,7 @@ Testing error on SVHN
 | AuxResNet-56-3<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45, 35} | **1.58** |
 
 <img src="http://i.imgur.com/KLThhLO.jpg" width = "400" height = "350" alt="图片名称" align=center />
-<img src="http://i.imgur.com/jFMEh0c.jpg)
-" width = "400" height = "350" alt="图片名称" align=center />
+<img src="http://i.imgur.com/jFMEh0c.jpg" width = "400" height = "350" alt="图片名称" align=center />
 
 ## Trained Models ##
 - [CIFAR10-AuxResNet-56-2 [56, 45]](http://baidu.com "AuxResNet-56-2")
