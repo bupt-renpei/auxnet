@@ -22,23 +22,23 @@ Testing error on SVHN
 | AuxResNet-56-2<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45} | 1.63 |
 | AuxResNet-56-3<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45, 35} | **1.58** |
 
-<img src="http://i.imgur.com/KLThhLO.jpg" width = "420" height = "350" alt="图片名称" align=center />
-<img src="http://i.imgur.com/jFMEh0c.jpg" width = "420" height = "350" alt="图片名称" align=center />
+<img src="http://i.imgur.com/KLThhLO.jpg" width = "450" height = "350" alt="图片名称" align=center />
+<img src="http://i.imgur.com/jFMEh0c.jpg" width = "450" height = "350" alt="图片名称" align=center />
 
 ## Trained Models ##
-- [CIFAR10-AuxResNet-56-2 [56, 45]](http://baidu.com "AuxResNet-56-2")
-- [CIFAR10-AuxResNet-56-5 [56, 45, 35, 25, 15]](http://baidu.com "AuxResNet-56-5")
-- [CIFAR10-AuxResNet-26-2/10 [26, 19]](http://baidu.com "AuxResNet-26-2/10")
-- [CIFAR100-AuxResNet-56-2 [56, 45]](http://baidu.com "AuxResNet-56-2")
-- [CIFAR100-AuxResNet-56-5 [56, 45, 35, 25, 15]](http://baidu.com "AuxResNet-56-5")
-- [CIFAR100-AuxResNet-26-2/10 [26, 19]](http://baidu.com "AuxResNet-26-2/10")
-- [SVHN-AuxResNet-56-3 [56, 45, 35]](http://baidu.com "AuxResNet-56-3")
+- [CIFAR10-AuxResNet-56-2](https://yadi.sk/d/zMvzifB0vcyGA "AuxResNet-56-2")
+- [CIFAR10-AuxResNet-56-5](https://yadi.sk/d/scmQFHGOvcyHP "AuxResNet-56-5")
+- [CIFAR10-AuxResNet-26-2/10](https://yadi.sk/d/g-fKiJdKvcyJH "AuxResNet-26-2/10")
+- [CIFAR100-AuxResNet-56-2](https://yadi.sk/d/9GTk0HrYvcyK6 "AuxResNet-56-2")
+- [CIFAR100-AuxResNet-56-5](https://yadi.sk/d/NqIb0RYyvcyKo "AuxResNet-56-5")
+- [CIFAR100-AuxResNet-26-2/10](https://yadi.sk/d/W8S5Cp3hvcyLT "AuxResNet-26-2/10")
+- [SVHN-AuxResNet-56-3 <img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger">](https://yadi.sk/d/fs1xwcIzvcyBo "AuxResNet-56-3")
 
 ## Model Testing ##
 All images don't need to be pre-processed and you just need to prepare these data sets as below. For convenience, we also provide the original data sets in torch format.
 
-- [CIFAR-10](http://torch.ch "cifar10") ([data preparation script](https://github.com/facebook/fb.resnet.torch/blob/master/datasets/cifar10-gen.lua "cifar10-preparation"))
-- [CIFAR-100](http://torch.ch "cifar100") ([data preparation script](https://github.com/facebook/fb.resnet.torch/blob/master/datasets/cifar100-gen.lua "cifar100-preparation"))
+- [CIFAR-10](https://yadi.sk/d/HvwH2jJBvcyTV "cifar10") ([data preparation script](https://github.com/facebook/fb.resnet.torch/blob/master/datasets/cifar10-gen.lua "cifar10-preparation"))
+- [CIFAR-100](https://yadi.sk/d/u7IJW2SEvcyUg "cifar100") ([data preparation script](https://github.com/facebook/fb.resnet.torch/blob/master/datasets/cifar100-gen.lua "cifar100-preparation"))
 - [SVHN](http://torch.ch "svhn") ([data preparation script](https://gist.github.com/szagoruyko/27712564a3f3765c5bfd933b56a21757 "svhn-preparation"))
 
 To get the result of the AuxResNet model for given benchmark data sets, you have to download the corresponding models and move them into the directory ``` ./pretrained ```.
@@ -49,7 +49,7 @@ th test.lua -dataset CIFAR10 -model AuxResNet-26-2/10.t7
 ```
 
 ## Intermediate Models ##
-During the training, **AuxResNet** simultaneously generates multiple models with different depth. Take AuxResNet-56-5 for example:
+During the training, **AuxResNet** simultaneously generates multiple models with different depth. Take [CIFAR10-AuxResNet-56-5](https://yadi.sk/d/scmQFHGOvcyHP "AuxResNet-56-5") ([outputs file](https://yadi.sk/d/ADDekHsJvcyNk "outputs-56-5")) for example:
 
 | intermediate models | #layers | #params |
 | ------------- |:-------------:|:-----:|
