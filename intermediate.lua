@@ -74,12 +74,14 @@ end
 
    for i=1,table.getn(segments) do
       segments[i]:evaluate()
+      segments[i]:cuda()
    end
    for i=1,table.getn(fcs) do
       fcs[i]:evaluate()
+      fcs[i]:cuda()
    end
 
-
+   -- the model is seperated into n segments w.r.t n outputs
    local nOutputs = table.getn(segments)
    local top1set = {}
    local top5set = {}
@@ -93,8 +95,9 @@ end
 
       local outputSet = {}
       local fcOutputSet = {}
-      -- local fcOutputSet = {}
+
       local temp_input = input
+      -- all the trained auxiliary outputs are saved in an individual file, but the final output is directly incorporated into the last segment
       for i=1, nOutputs-1 do
          local temp_output = segments[i]:forward(temp_input)
          local temp_fc_output = fcs[i]:forward(temp_output)

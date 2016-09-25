@@ -37,15 +37,15 @@ Testing error on SVHN
 ## Model Testing ##
 All images don't need to be pre-processed and you just need to prepare these data sets as below. For convenience, we also provide the original data sets in torch format.
 
-- [CIFAR-10](https://yadi.sk/d/HvwH2jJBvcyTV "cifar10") ([data preparation script](https://github.com/facebook/fb.resnet.torch/blob/master/datasets/cifar10-gen.lua "cifar10-preparation"))
-- [CIFAR-100](https://yadi.sk/d/u7IJW2SEvcyUg "cifar100") ([data preparation script](https://github.com/facebook/fb.resnet.torch/blob/master/datasets/cifar100-gen.lua "cifar100-preparation"))
-- [SVHN](https://yadi.sk/d/BwgQII_LvfPH4 "svhn") ([data preparation script](https://gist.github.com/szagoruyko/27712564a3f3765c5bfd933b56a21757 "svhn-preparation"))
+- [CIFAR-10](https://yadi.sk/d/HvwH2jJBvcyTV "cifar10") ([data preparation script](https://github.com/guoyongcn/auxresnet/blob/master/datasets/cifar10-gen.lua "cifar10-preparation"))
+- [CIFAR-100](https://yadi.sk/d/u7IJW2SEvcyUg "cifar100") ([data preparation script](https://github.com/guoyongcn/auxresnet/blob/master/datasets/cifar100-gen.lua "cifar100-preparation"))
+- [SVHN](https://yadi.sk/d/BwgQII_LvfPH4 "svhn") ([data preparation script](https://github.com/guoyongcn/auxresnet/blob/master/datasets/svhn-gen.lua "svhn-preparation"))
 
 To get the result of the AuxResNet model for given benchmark data sets, you have to download the corresponding models and move them into the directory ``` ./pretrained ```.
-Then you can run the script [test.lua](). For example:
+Then you can run the script [test.lua](https://github.com/guoyongcn/auxresnet/blob/master/test.lua "testing"). For example:
 
 ```
-th test.lua -dataset CIFAR10 -model AuxResNet-26-2/10.t7 
+th test.lua -dataset CIFAR10 -trainedModel cifar10-auxresnet-26-2-wide-10 
 ```
 
 ## Intermediate Models ##
@@ -59,10 +59,10 @@ During the training, **AuxResNet** simultaneously generates multiple models with
 |output-25| 25 | 0.09M |
 |output-15| 15 | 0.03M |
 
-To run the testing for intermediate models, simply run the script [intermediate.lua]().
+To run the testing for intermediate models, simply run the script [intermediate.lua](https://github.com/guoyongcn/auxresnet/blob/master/intermediate.lua "intermediate").
 
 ```
-th intermediate.lua -dataset CIFAR10 -model AuxResNet-56-5.t7 -outputs outputs-56-5.t7 
+th intermediate.lua -dataset CIFAR10 -trainedModel cifar10-auxresnet-56-5 -outputs outputs-56-5
 ```
 
 ## Other Models ##
