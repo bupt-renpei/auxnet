@@ -53,7 +53,7 @@ To get the result of the AuxResNet model for given benchmark data sets, you have
 Then you can run the script [test.lua](https://github.com/guoyongcn/auxresnet/blob/master/test.lua "testing"). For example:
 
 ```
-th test.lua -dataset cifar10 -trainedModel cifar10-auxresnet-26-2-wide-10 
+th test.lua -dataset cifar10 -model cifar10-auxresnet-26-2-wide-10 
 ```
 
 ## Intermediate Models ##
@@ -70,7 +70,7 @@ During the training, **AuxResNet** simultaneously generates multiple models with
 To run the testing for intermediate models, simply run the script [intermediate.lua](https://github.com/guoyongcn/auxresnet/blob/master/intermediate.lua "intermediate").
 
 ```
-th intermediate.lua -dataset cifar10 -trainedModel cifar10-auxresnet-56-5 -outputs cifar10-auxresnet-56-5-auxoutputs
+th intermediate.lua -dataset cifar10 -model cifar10-auxresnet-56-5 -outputs cifar10-auxresnet-56-5-auxoutputs
 ```
 
 ## Other Models ##

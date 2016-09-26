@@ -18,7 +18,7 @@ function M.parse(arg)
    cmd:option('-batchSize',       128,      'mini-batch size (1 = pure stochastic)')
    cmd:option('-testOnly',        'true', 'Run on validation set only')
    ---------- Model options ----------------------------------
-   cmd:option('-trainedModel',      'none',   'Path to the trained model')
+   cmd:option('-model',      'none',   'Path to the trained model')
    cmd:option('-outputs',   'none',   'Path to an outputs file')
 
    cmd:text()
