@@ -27,7 +27,7 @@ Testing error on SVHN
 
 ## Trained Models ##
 - [CIFAR10-AuxResNet-56-2](https://yadi.sk/d/zMvzifB0vcyGA "AuxResNet-56-2")
-- [CIFAR10-AuxResNet-56-5](https://yadi.sk/d/scmQFHGOvcyHP "AuxResNet-56-5")
+- [CIFAR10-AuxResNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "AuxResNet-56-5")
 - [CIFAR10-AuxResNet-26-2/10](https://yadi.sk/d/g-fKiJdKvcyJH "AuxResNet-26-2/10")
 - [CIFAR100-AuxResNet-56-2](https://yadi.sk/d/9GTk0HrYvcyK6 "AuxResNet-56-2")
 - [CIFAR100-AuxResNet-56-5](https://yadi.sk/d/NqIb0RYyvcyKo "AuxResNet-56-5")
@@ -45,11 +45,11 @@ To get the result of the AuxResNet model for given benchmark data sets, you have
 Then you can run the script [test.lua](https://github.com/guoyongcn/auxresnet/blob/master/test.lua "testing"). For example:
 
 ```
-th test.lua -dataset CIFAR10 -trainedModel cifar10-auxresnet-26-2-wide-10 
+th test.lua -dataset cifar10 -trainedModel cifar10-auxresnet-26-2-wide-10 
 ```
 
 ## Intermediate Models ##
-During the training, **AuxResNet** simultaneously generates multiple models with different depth. Take [CIFAR10-AuxResNet-56-5](https://yadi.sk/d/scmQFHGOvcyHP "AuxResNet-56-5") ([outputs file](https://yadi.sk/d/ADDekHsJvcyNk "outputs-56-5")) for example:
+During the training, **AuxResNet** simultaneously generates multiple models with different depth. Take [CIFAR10-AuxResNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "AuxResNet-56-5") (including the *auxiliary outputs* file) for example:
 
 | intermediate models | #layers | #params |
 | ------------- |:-------------:|:-----:|
@@ -62,7 +62,7 @@ During the training, **AuxResNet** simultaneously generates multiple models with
 To run the testing for intermediate models, simply run the script [intermediate.lua](https://github.com/guoyongcn/auxresnet/blob/master/intermediate.lua "intermediate").
 
 ```
-th intermediate.lua -dataset CIFAR10 -trainedModel cifar10-auxresnet-56-5 -outputs outputs-56-5
+th intermediate.lua -dataset cifar10 -trainedModel cifar10-auxresnet-56-5 -outputs cifar10-auxresnet-56-5-auxoutputs
 ```
 
 ## Other Models ##

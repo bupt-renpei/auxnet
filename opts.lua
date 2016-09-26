@@ -10,7 +10,7 @@ function M.parse(arg)
 
    cmd:option('-dataset',    'cifar10', 'Options: cifar10 | cifar100 | svhn')
    cmd:option('-manualSeed', 1,          'Manually set RNG seed')
-   cmd:option('-pretrain',        'pretrain',      'Path to save trained models')   
+   cmd:option('-pretrain',        'pretrain',      'Path to save trained models')
    cmd:option('-gen',        'gen',      'Path to save generated files')
    ------------- Data options ------------------------
    cmd:option('-nThreads',        10, 'number of data loading threads')
@@ -28,16 +28,16 @@ function M.parse(arg)
    opt.testOnly = opt.testOnly ~= 'false'
 
    local modelList = {
-      ['cifar10-56-2'] = '',
-      ['cifar10-56-5'] = '',
-      ['cifar10-26-2-wide-10'] = '',
-      ['cifar100-56-2'] = '',
-      ['cifar100-56-5'] = '',
-      ['cifar100-26-2-wide-10'] = '',
-      ['svhn-56-3-dropout'] = '',
+      ['cifar10-auxresnet-56-2'] = '',
+      ['cifar10-auxresnet-56-5'] = '',
+      ['cifar10-auxresnet-26-2-wide-10'] = '',
+      ['cifar100-auxresnet-56-2'] = '',
+      ['cifar100-auxresnet-56-5'] = '',
+      ['cifar100-auxresnet-26-2-wide-10'] = '',
+      ['svhn-auxresnet-56-3-dropout'] = '',
    }
    local outputsList = {
-      ['outputs-56-5'] = 'outputs-56-5',
+      ['cifar10-auxresnet-56-5-auxoutputs'] = '',
    }
    if opt.trainedModel ~= 'none' then
       assert(modelList[opt.trainedModel], 'Invalid model: ' .. opt.trainedModel)
