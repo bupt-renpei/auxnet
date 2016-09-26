@@ -39,8 +39,8 @@ function M.parse(arg)
    local outputsList = {
       ['cifar10-auxresnet-56-5-auxoutputs'] = '',
    }
-   if opt.trainedModel ~= 'none' then
-      assert(modelList[opt.trainedModel], 'Invalid model: ' .. opt.trainedModel)
+   if opt.model ~= 'none' then
+      assert(modelList[opt.model], 'Invalid model: ' .. opt.model)
    end
    if opt.outputs ~= 'none' then
       assert(outputsList[opt.outputs], 'Invalid outputs: ' .. opt.outputs)

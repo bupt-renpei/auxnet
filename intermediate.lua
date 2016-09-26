@@ -13,7 +13,7 @@ cutorch.manualSeedAll(opt.manualSeed)
 torch.setdefaulttensortype('torch.FloatTensor')
 
 local criterion = nn.CrossEntropyCriterion():cuda()
-local modelPath = paths.concat(opt.pretrain, opt.trainedModel .. '.t7')
+local modelPath = paths.concat(opt.pretrain, opt.model .. '.t7')
 local outputsPath = paths.concat(opt.pretrain, opt.outputs .. '.t7')
 local segments = torch.load(modelPath)
 local fcs = torch.load(outputsPath)
