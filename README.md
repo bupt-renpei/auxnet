@@ -25,6 +25,14 @@ Testing error on SVHN
 <img src="http://i.imgur.com/KLThhLO.jpg" width = "420" height = "350" alt="图片名称" align=center />
 <img src="http://i.imgur.com/jFMEh0c.jpg" width = "420" height = "350" alt="图片名称" align=center />
 
+## Requirements ##
+See the [installation instructions](https://github.com/guoyongcn/fb.resnet.torch/blob/master/INSTALL.md "installation") for a step-by-step guide.
+
+- Install [Torch](http://torch.ch/ "torch") on a machine with CUDA GPU
+- Install [cuDNN](https://developer.nvidia.com/cudnn "cudnn") and the corresponding bindings in Torch
+
+If you already have Torch installed, update the luarocks ```nn```, ```cunn``` and ```cudnn```.
+
 ## Trained Models ##
 - [CIFAR10-AuxResNet-56-2](https://yadi.sk/d/zMvzifB0vcyGA "AuxResNet-56-2")
 - [CIFAR10-AuxResNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "AuxResNet-56-5")
