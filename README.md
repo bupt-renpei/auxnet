@@ -22,8 +22,8 @@ Testing error on SVHN
 | AuxNet-56-2<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45} | 1.63 |
 | AuxNet-56-3<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45, 35} | **1.58** |
 
-<img src="http://i.imgur.com/KLThhLO.jpg" width = "420" height = "350" alt="图片名称" align=center />
-<img src="http://i.imgur.com/jFMEh0c.jpg" width = "420" height = "350" alt="图片名称" align=center />
+<img src="http://i.imgur.com/iesNjI0.jpg" width = "420" height = "350" alt="cifar10-auxnet-26-2/10" align=center />
+<img src="http://i.imgur.com/L5M5USd.jpg" width = "420" height = "350" alt="cifar100-auxnet-26-2/10" align=center />
 
 ## Requirements ##
 See the [installation instructions](https://github.com/guoyongcn/fb.resnet.torch/blob/master/INSTALL.md "installation") for a step-by-step guide.
