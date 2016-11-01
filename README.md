@@ -1,16 +1,16 @@
-# Trained AuxResNet Torch models #
-The depth of convolutional neural networks (CNNs) is of critical importance. There are some issues associated with the increased depth. Besides the vanishing gradient problem, very deep networks also suffer from a vanishing supervision signal problem. In the course of the investigation we presented a novel model, called **AuxResNet**, which addresses the vanishing supervision signal problem through the use of additional auxiliary outputs. We proposed a *multi-way gradient backpropagation* method to train the models. As a result, the proposed **AuxResNet** gives rise to a more compact network and achieves state-of-the-art performance on various data sets. **AuxResNet** also helps to produce multiple models of different depths, thus offering the opportunity for a form of model selection.
+# Trained AuxNet Torch models #
+The depth of convolutional neural networks (CNNs) is of critical importance. There are some issues associated with the increased depth. Besides the vanishing gradient problem, very deep networks also suffer from a vanishing supervision signal problem. In the course of the investigation we presented a novel model, called **AuxNet**, which addresses the vanishing supervision signal problem through the use of additional auxiliary outputs. We proposed a *multi-way gradient backpropagation* method to train the models. As a result, the proposed **AuxNet** gives rise to a more compact network and achieves state-of-the-art performance on various data sets. **AuxNet** also helps to produce multiple models of different depths, thus offering the opportunity for a form of model selection.
 
-This repository contains the trained models of **AuxResNet** using the multi-way backpropagation. These models are trained on CIFAR and SVHN. The performances of AuxResNet on these benchmark data sets are included below.
+This repository contains the trained models of **AuxNet** using the multi-way backpropagation. These models are trained on CIFAR and SVHN. The performances of AuxNet on these benchmark data sets are included below.
 
 Testing error on CIFAR
 
 | network       | outputs position | CIFAR10 | CIFAR100  |
 | ------------- |:-------------:|:-------------:|:-----:|
 | ResNet-1001| {1001} | 4.62 | 22.71 |
-| AuxResNet-56-2| {56, 45} | 5.89 | 26.83 |
-| AuxResNet-56-5| {56, 45, 35, 25, 15} | 5.53      | 26.62 |
-| AuxResNet-26-2/10| {26, 19} | **3.77** | **19.69** |
+| AuxNet-56-2| {56, 45} | 5.89 | 26.83 |
+| AuxNet-56-5| {56, 45, 35, 25, 15} | 5.53      | 26.62 |
+| AuxNet-26-2/10| {26, 19} | **3.77** | **19.69** |
 
 Testing error on SVHN
 
@@ -18,9 +18,9 @@ Testing error on SVHN
 | ------------- |:-------------:|:-----:|
 | ResNet-56      | {56} | 2.06 |
 | ResNet-56<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56} | 1.70 |
-| AuxResNet-56-2      | {56, 45} | 1.84 |
-| AuxResNet-56-2<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45} | 1.63 |
-| AuxResNet-56-3<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45, 35} | **1.58** |
+| AuxNet-56-2      | {56, 45} | 1.84 |
+| AuxNet-56-2<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45} | 1.63 |
+| AuxNet-56-3<img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger" style="border:none;"> | {56, 45, 35} | **1.58** |
 
 <img src="http://i.imgur.com/KLThhLO.jpg" width = "420" height = "350" alt="图片名称" align=center />
 <img src="http://i.imgur.com/jFMEh0c.jpg" width = "420" height = "350" alt="图片名称" align=center />
@@ -34,30 +34,30 @@ See the [installation instructions](https://github.com/guoyongcn/fb.resnet.torch
 If you already have Torch installed, update the luarocks ```nn```, ```cunn``` and ```cudnn```.
 
 ## Trained Models ##
-- [CIFAR10-AuxResNet-56-2](https://yadi.sk/d/zMvzifB0vcyGA "AuxResNet-56-2")
-- [CIFAR10-AuxResNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "AuxResNet-56-5")
-- [CIFAR10-AuxResNet-26-2/10](https://yadi.sk/d/g-fKiJdKvcyJH "AuxResNet-26-2/10")
-- [CIFAR100-AuxResNet-56-2](https://yadi.sk/d/9GTk0HrYvcyK6 "AuxResNet-56-2")
-- [CIFAR100-AuxResNet-56-5](https://yadi.sk/d/NqIb0RYyvcyKo "AuxResNet-56-5")
-- [CIFAR100-AuxResNet-26-2/10](https://yadi.sk/d/W8S5Cp3hvcyLT "AuxResNet-26-2/10")
-- [SVHN-AuxResNet-56-3 <img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger">](https://yadi.sk/d/fs1xwcIzvcyBo "AuxResNet-56-3")
+- [CIFAR10-AuxNet-56-2](https://yadi.sk/d/zMvzifB0vcyGA "AuxNet-56-2")
+- [CIFAR10-AuxNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "AuxNet-56-5")
+- [CIFAR10-AuxNet-26-2/10](https://yadi.sk/d/g-fKiJdKvcyJH "AuxNet-26-2/10")
+- [CIFAR100-AuxNet-56-2](https://yadi.sk/d/9GTk0HrYvcyK6 "AuxNet-56-2")
+- [CIFAR100-AuxNet-56-5](https://yadi.sk/d/NqIb0RYyvcyKo "AuxNet-56-5")
+- [CIFAR100-AuxNet-26-2/10](https://yadi.sk/d/W8S5Cp3hvcyLT "AuxNet-26-2/10")
+- [SVHN-AuxNet-56-3 <img src="http://chart.googleapis.com/chart?cht=tx&chl=^\dagger">](https://yadi.sk/d/fs1xwcIzvcyBo "AuxNet-56-3")
 
 ## Model Testing ##
 All images don't need to be pre-processed and you just need to prepare these data sets as below. For convenience, we also provide the original data sets in torch format.
 
-- [CIFAR-10](https://yadi.sk/d/HvwH2jJBvcyTV "cifar10") ([data preparation script](https://github.com/guoyongcn/auxresnet/blob/master/datasets/cifar10-gen.lua "cifar10-preparation"))
-- [CIFAR-100](https://yadi.sk/d/u7IJW2SEvcyUg "cifar100") ([data preparation script](https://github.com/guoyongcn/auxresnet/blob/master/datasets/cifar100-gen.lua "cifar100-preparation"))
-- [SVHN](https://yadi.sk/d/BwgQII_LvfPH4 "svhn") ([data preparation script](https://github.com/guoyongcn/auxresnet/blob/master/datasets/svhn-gen.lua "svhn-preparation"))
+- [CIFAR-10](https://yadi.sk/d/HvwH2jJBvcyTV "cifar10") ([data preparation script](https://github.com/guoyongcn/auxnet/blob/master/datasets/cifar10-gen.lua "cifar10-preparation"))
+- [CIFAR-100](https://yadi.sk/d/u7IJW2SEvcyUg "cifar100") ([data preparation script](https://github.com/guoyongcn/auxnet/blob/master/datasets/cifar100-gen.lua "cifar100-preparation"))
+- [SVHN](https://yadi.sk/d/BwgQII_LvfPH4 "svhn") ([data preparation script](https://github.com/guoyongcn/auxnet/blob/master/datasets/svhn-gen.lua "svhn-preparation"))
 
-To get the result of the AuxResNet model for given benchmark data sets, you have to download the corresponding models and move them into the directory ``` ./pretrained ```.
-Then you can run the script [test.lua](https://github.com/guoyongcn/auxresnet/blob/master/test.lua "testing"). For example:
+To get the result of the AuxNet model for given benchmark data sets, you have to download the corresponding models and move them into the directory ``` ./pretrained ```.
+Then you can run the script [test.lua](https://github.com/guoyongcn/auxnet/blob/master/test.lua "testing"). For example:
 
 ```
-th test.lua -dataset cifar10 -model cifar10-auxresnet-26-2-wide-10 
+th test.lua -dataset cifar10 -model cifar10-auxnet-26-2-wide-10 
 ```
 
 ## Intermediate Models ##
-During the training, **AuxResNet** simultaneously generates multiple models with different depth. Take [CIFAR10-AuxResNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "AuxResNet-56-5") (including the *auxiliary outputs* file) for example:
+During the training, **AuxNet** simultaneously generates multiple models with different depth. Take [CIFAR10-AuxNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "AuxNet-56-5") (including the *auxiliary outputs* file) for example:
 
 | intermediate models | #layers | #params |
 | ------------- |:-------------:|:-----:|
@@ -67,10 +67,10 @@ During the training, **AuxResNet** simultaneously generates multiple models with
 |output-25| 25 | 0.09M |
 |output-15| 15 | 0.03M |
 
-To run the testing for intermediate models, simply run the script [intermediate.lua](https://github.com/guoyongcn/auxresnet/blob/master/intermediate.lua "intermediate").
+To run the testing for intermediate models, simply run the script [intermediate.lua](https://github.com/guoyongcn/auxnet/blob/master/intermediate.lua "intermediate").
 
 ```
-th intermediate.lua -dataset cifar10 -model cifar10-auxresnet-56-5 -outputs cifar10-auxresnet-56-5-auxoutputs
+th intermediate.lua -dataset cifar10 -model cifar10-auxnet-56-5 -outputs cifar10-auxnet-56-5-outputs
 ```
 
 ## Other Models ##

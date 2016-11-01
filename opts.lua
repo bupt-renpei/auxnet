@@ -28,16 +28,16 @@ function M.parse(arg)
    opt.testOnly = opt.testOnly ~= 'false'
 
    local modelList = {
-      ['cifar10-auxresnet-56-2'] = '',
-      ['cifar10-auxresnet-56-5'] = '',
-      ['cifar10-auxresnet-26-2-wide-10'] = '',
-      ['cifar100-auxresnet-56-2'] = '',
-      ['cifar100-auxresnet-56-5'] = '',
-      ['cifar100-auxresnet-26-2-wide-10'] = '',
-      ['svhn-auxresnet-56-3-dropout'] = '',
+      ['cifar10-auxnet-56-2'] = '',
+      ['cifar10-auxnet-56-5'] = '',
+      ['cifar10-auxnet-26-2-wide-10'] = '',
+      ['cifar100-auxnet-56-2'] = '',
+      ['cifar100-auxnet-56-5'] = '',
+      ['cifar100-auxnet-26-2-wide-10'] = '',
+      ['svhn-auxnet-56-3-dropout'] = '',
    }
    local outputsList = {
-      ['cifar10-auxresnet-56-5-auxoutputs'] = '',
+      ['cifar10-auxnet-56-5-outputs'] = '',
    }
    if opt.model ~= 'none' then
       assert(modelList[opt.model], 'Invalid model: ' .. opt.model)
