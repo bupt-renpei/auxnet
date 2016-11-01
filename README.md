@@ -27,7 +27,7 @@ Testing error on SVHN
 
 
 ## Requirements ##
-See the [installation instructions](https://github.com/guoyongcn/fb.resnet.torch/blob/master/INSTALL.md "installation") for a step-by-step guide.
+See the [installation instructions](https://github.com/facebook/fb.resnet.torch/blob/master/INSTALL.md "installation") for a step-by-step guide.
 
 - Install [Torch](http://torch.ch/ "torch") on a machine with CUDA GPU
 - Install [cuDNN](https://developer.nvidia.com/cudnn "cudnn") and the corresponding bindings in Torch
