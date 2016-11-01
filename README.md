@@ -46,9 +46,9 @@ If you already have Torch installed, update the luarocks ```nn```, ```cunn``` an
 ## Model Testing ##
 All images don't need to be pre-processed and you just need to prepare these data sets as below. For convenience, we also provide the original data sets in torch format.
 
-- [CIFAR-10](https://yadi.sk/d/HvwH2jJBvcyTV "cifar10") ([data preparation script](https://github.com/guoyongcn/auxnet/blob/master/datasets/cifar10-gen.lua "cifar10-preparation"))
-- [CIFAR-100](https://yadi.sk/d/u7IJW2SEvcyUg "cifar100") ([data preparation script](https://github.com/guoyongcn/auxnet/blob/master/datasets/cifar100-gen.lua "cifar100-preparation"))
-- [SVHN](https://yadi.sk/d/BwgQII_LvfPH4 "svhn") ([data preparation script](https://github.com/guoyongcn/auxnet/blob/master/datasets/svhn-gen.lua "svhn-preparation"))
+- [CIFAR-10](https://yadi.sk/d/HvwH2jJBvcyTV "cifar10") ([data preparation script](https://github.com/guoyongcs/auxnet/blob/master/datasets/cifar10-gen.lua "cifar10-preparation"))
+- [CIFAR-100](https://yadi.sk/d/u7IJW2SEvcyUg "cifar100") ([data preparation script](https://github.com/guoyongcs/auxnet/blob/master/datasets/cifar100-gen.lua "cifar100-preparation"))
+- [SVHN](https://yadi.sk/d/BwgQII_LvfPH4 "svhn") ([data preparation script](https://github.com/guoyongcs/auxnet/blob/master/datasets/svhn-gen.lua "svhn-preparation"))
 
 To get the result of the AuxNet model for given benchmark data sets, you have to download the corresponding models and move them into the directory ``` ./pretrained ```.
 Then you can run the script [test.lua](https://github.com/guoyongcn/auxnet/blob/master/test.lua "testing"). For example:
