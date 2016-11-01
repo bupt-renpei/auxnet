@@ -10,7 +10,7 @@ local opts = require 'opts'
 local opt = opts.parse(arg)
 torch.manualSeed(opt.manualSeed)
 cutorch.manualSeedAll(opt.manualSeed)
-torch.setdefaulttensortype('torch.FloatTensor')
+torch.setdefaulttensortype('torch.FloatTensor') 
 
 local criterion = nn.CrossEntropyCriterion():cuda()
 local modelPath = paths.concat(opt.pretrain, opt.model .. '.t7')
