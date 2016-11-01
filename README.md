@@ -25,6 +25,7 @@ Testing error on SVHN
 <img src="http://i.imgur.com/iesNjI0.jpg" width = "420" height = "350" alt="cifar10-auxnet-26-2/10" align=center />
 <img src="http://i.imgur.com/L5M5USd.jpg" width = "420" height = "350" alt="cifar100-auxnet-26-2/10" align=center />
 
+
 ## Requirements ##
 See the [installation instructions](https://github.com/guoyongcn/fb.resnet.torch/blob/master/INSTALL.md "installation") for a step-by-step guide.
 
